@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special{}
+    </style>
+</head>
+<body>
+    <section>
+        <h3>Exploring DOM</h3>
+        <article>
+            <h3 id="bestseller">article-1</h3>
+            <title></title>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ducimus eligendi delectus nostrum voluptate nisi corrupti et voluptatibus molestiae quasi officiis vel ipsum sed cum mollitia, accusamus laboriosam esse ut!</p>
+        </article>
+        <article class="special">
+            <h3>article-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Tenetur cum cumque quis in? Quasi aut assumenda dignissimos facilis dolorum unde error exercitationem ullam, deleniti repellat praesentium accusamus saepe laudantium explicabo. Harum aspernatur dolore minima ratione repudiandae quia animi?</p>
+        </article>
+        <article class="special">
+            <h3 title="I am the article-3">article-3</h3>
+            <p class="author">author-3</p>
+            <p class="description">Culpa nemo, sunt laborum amet incidunt necessitatibus voluptate consequatur animi fuga quidem vitae quibusdam expedita voluptas, deleniti tenetur similique aperiam. Cupiditate, maxime molestias autem laborum dolore itaque fuga sint ratione.</p>
+        </article>
+    </section>
+    <script>
+        document.body.style.backgroundColor = 'tomato';
+        var authors = document.getElementsByClassName('author');
+        
+        for (var i = 0; i < authors.length; i++){
+            var element = authors[i];
+            element.setAttribute('title', 'I am the boss');
+            // console.log(element);
+            element.style.backgroundColor = 'red'; 
+        }
+    </script>
+</body>
+</html>
